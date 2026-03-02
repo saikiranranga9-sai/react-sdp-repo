@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+import { Link, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import './admin.css';
 import AdminHome from './AdminHome';
 import ViewCustomers from './ViewCustomers';
@@ -33,6 +33,7 @@ export default function AdminNavBar() {
 
       <div className="admin-content">
         <Routes>
+          <Route path="/admin" element={<Navigate to="/admin/home" replace />} />
           <Route path="/admin/home" element={<AdminHome />} />
           <Route path="/admin/view-customers" element={<ViewCustomers />} />
           <Route path="/admin/add-manager" element={<AddManager />} />

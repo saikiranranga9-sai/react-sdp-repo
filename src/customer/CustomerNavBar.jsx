@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+import { Link, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import './customer.css';
 import CustomerHome from './CustomerHome';
 import ViewEvents from './ViewEvents';
@@ -33,6 +33,7 @@ export default function CustomerNavBar() {
 
       <div className="customer-content">
         <Routes>
+          <Route path="/customer" element={<Navigate to="/customer/home" replace />} />
           <Route path="/customer/home" element={<CustomerHome />} />
           <Route path="/customer/view-events" element={<ViewEvents />} />
           <Route path="/customer/book-event" element={<BookEvent />} />

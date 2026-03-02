@@ -46,8 +46,9 @@ const AdminLogin = () => {
         password: '',
       });
       
-      // Redirect to admin home
-      window.location.href = '/';
+      // send to admin home instead of root so the dashboard is visible
+      navigate('/admin/home');
+      window.location.reload();
     } else {
       setError('Invalid username or password');
       console.log('Invalid credentials');

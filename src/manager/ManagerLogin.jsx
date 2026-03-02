@@ -44,8 +44,11 @@ const ManagerLogin = () => {
         password: '',
       });
 
-      // Redirect to home page
-      window.location.href = '/';
+      // Redirect to the manager home route so the dashboard content appears immediately
+      // using navigate keeps us in the SPA and avoids a full reload.
+      navigate('/manager/home');
+      // ensure state is refreshed
+      window.location.reload();
     } else {
       setError('Invalid username or password');
       console.log('Invalid credentials');

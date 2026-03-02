@@ -36,7 +36,8 @@ const CustomerLogin = () => {
         username: '',
         password: '',
       });
-      navigate('/');
+      // go directly to customer home
+      navigate('/customer/home');
       window.location.reload();
     } 
     else 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 import './manager.css';
 import ManagerHome from './ManagerHome';
 import AddEvent from './AddEvent';
@@ -35,7 +35,6 @@ export default function ManagerNavBar() {
 
       <div className="manager-content">
         <Routes>
-          <Route path="/manager" element={<Navigate to="/manager/home" replace />} />
           <Route path="/manager/home" element={<ManagerHome />} />
           <Route path="/manager/view-events" element={<ViewEventsByManager />} />
           <Route path="/manager/add-event" element={<AddEvent />} />
